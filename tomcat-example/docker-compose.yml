@@ -10,9 +10,6 @@ services:
       - type: bind
         source: ./example-1/example.war
         target: /usr/local/tomcat/webapps/example.war
-
-
-
   tomcat-2:
     image: tomcat
     build: .
@@ -23,14 +20,13 @@ services:
       - type: bind
         source: ./example-2/example.war
         target: /usr/local/tomcat/webapps/example.war
-
-
   tomcat-3:
     image: tomcat
     build: .
     ports:
       - "8082:8082"
     volumes:
+      - type: bind
         source: ./example-3/example.war
         target: /usr/local/tomcat/webapps/example.war
   postgres: 
@@ -43,4 +39,3 @@ services:
       - postgres-data:/var/lib/postgresql/data
 volumes:
   postgres-data:
-  example-3:
