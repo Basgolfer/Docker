@@ -1,10 +1,12 @@
 # NOTE: this example is taken from the default Dockerfile for the official nginx Docker Hub Repo
+FROM debian:stretch-slim
 # all images must have a FROM
 # usually from a minimal Linux distribution like debain or (even better) alpine
 # if you truly want to start with an empty container, use FROM scratch
 
 ENV NGINX_VERSION 1.13.6-1~stretch
 ENV NJS_VERSION   1.13.6.0.1.14-1~stretch
+ENV TERM xterm
 # optional environment variable that's used in later lines and set as envvar when container is running
 
 RUN apt-get update \
