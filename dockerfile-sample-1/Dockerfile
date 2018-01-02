@@ -1,9 +1,4 @@
 # NOTE: this example is taken from the default Dockerfile for the official nginx Docker Hub Repo
-# https://hub.docker.com/_/nginx/
-# NOTE: This file is slightly different then the video, because nginx versions have been updated 
-#       to match the latest standards from docker hub... but it's doing the same thing as the video
-#       describes
-FROM debian:stretch-slim
 # all images must have a FROM
 # usually from a minimal Linux distribution like debain or (even better) alpine
 # if you truly want to start with an empty container, use FROM scratch
